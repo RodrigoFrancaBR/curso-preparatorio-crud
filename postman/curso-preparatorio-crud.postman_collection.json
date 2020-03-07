@@ -1,0 +1,363 @@
+{
+	"variables": [],
+	"info": {
+		"name": "curso-preparatorio-crud",
+		"_postman_id": "53e1d50e-92b2-5f73-b322-df2b2b4e79f0",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "unidade",
+			"description": "",
+			"item": [
+				{
+					"name": "delete",
+					"request": {
+						"url": "http://localhost:8080/curso-preparatorio/unidades/3",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "findAll",
+					"request": {
+						"url": "http://localhost:8080/curso-preparatorio/unidades",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "save",
+					"request": {
+						"url": "http://localhost:8080/curso-preparatorio/unidades",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nome\": \"MADUREIRA\",\n    \"endereco\": \"RUA CAROLINA MACHADO 500\",\n    \"status\": \"ATIVA\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "findById",
+					"request": {
+						"url": "http://localhost:8080/curso-preparatorio/unidades/1",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"url": "http://localhost:8080/curso-preparatorio/unidades/",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {\n        \"id\": 2,\n        \"nome\": \"CASCADURA\",\n        \"endereco\": \"RUA QUINTÃO 153\",\n        \"status\": \"ATIVA\"\n    }"
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "turma",
+			"description": "",
+			"item": [
+				{
+					"name": "delete",
+					"request": {
+						"url": "http://localhost:8080/curso-preparatorio/turmas/1",
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "findAll",
+					"request": {
+						"url": "http://localhost:8080/curso-preparatorio/turmas",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "save",
+					"request": {
+						"url": "http://localhost:8080/curso-preparatorio/turmas",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"nome\":\"1003\",\n \"unidade\" :       {\n        \"id\": 1,\n        \"nome\": \"ABOLIÇÃO\",\n        \"endereco\": \"RUA DA ABOLIÇÃO 100\",\n        \"status\": \"ATIVA\"\n    }\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "findById",
+					"request": {
+						"url": "http://localhost:8080/curso-preparatorio/turmas/2",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"url": "http://localhost:8080/curso-preparatorio/turmas/",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"id\": 1,\n        \"nome\": \"1001A\",\n        \"status\": \"ATIVA\",\n        \"unidade\": {\n            \"id\": 1,\n            \"nome\": \"ABOLIÇÃO\",\n            \"endereco\": \"RUA DA ABOLIÇÃO 100\",\n            \"status\": \"ATIVA\"\n        }\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "aluno",
+			"description": "",
+			"item": [
+				{
+					"name": "update",
+					"request": {
+						"url": "http://localhost:8080/curso-preparatorio/alunos/",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {\n        \"id\": 1,\n        \"nome\": \"RODRIGO DE FRANÇA\",\n        \"cpf\": \"107.669.177-38\",\n        \"rg\": \"20.524.877-8\",\n        \"ufRg\": \"RJ\",\n        \"orgaoExpedidor\": \"DETRAN\",\n        \"sexo\": \"MASCULINO\",\n        \"celular\": \"2198488-0409\",\n        \"residencial\": \"213276-8531\",\n        \"email\": \"FFRANCACOSTA@GMAIL.COM\",\n        \"cep\": \"21381-050\",\n        \"endereco\": \"QUINTÃO 153\",\n        \"bairro\": \"CASCADURA\",\n        \"cidade\": \"RIO DE JANEIRO\",\n        \"estado\": \"RJ\",\n        \"pai\": \"DARCY\",\n        \"mae\": \"FATIMA\",\n        \"situacao\": \"INATIVO\"\n    }"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "findById",
+					"request": {
+						"url": "http://localhost:8080/curso-preparatorio/alunos/1",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "save",
+					"request": {
+						"url": "http://localhost:8080/curso-preparatorio/alunos",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {\n        \"nome\": \"ROSSYWAN\",\n        \"cpf\": \"107.669.177-30\",\n        \"rg\": \"20.524.877-1\",\n        \"ufRg\": \"RJ\",\n        \"orgaoExpedidor\": \"DETRAN\",\n        \"sexo\": \"MASCULINO\",\n        \"dataNascimento\": 494564400000,\n        \"celular\": \"2198488-0409\",\n        \"residencial\": \"213276-8531\",\n        \"email\": \"FFRANCACOSTA@GMAIL.COM\",\n        \"cep\": \"21381-050\",\n        \"endereco\": \"QUINTÃO 153\",\n        \"bairro\": \"CASCADURA\",\n        \"cidade\": \"RIO DE JANEIRO\",\n        \"estado\": \"RJ\",\n        \"pai\": \"DARCY\",\n        \"mae\": \"FATIMA\",\n        \"situacao\": \"INATIVO\"\n    }"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"url": "http://localhost:8080/curso-preparatorio/alunos/1",
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "findAll",
+					"request": {
+						"url": "http://localhost:8080/curso-preparatorio/alunos",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "parcela",
+			"description": "",
+			"item": [
+				{
+					"name": "findById",
+					"request": {
+						"url": "http://localhost:8080/curso/resources/unidades/1",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"url": "http://localhost:8080/curso/resources/unidades/1",
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "contrato",
+			"description": "",
+			"item": [
+				{
+					"name": "update",
+					"request": {
+						"url": "http://localhost:8080/curso/resources/contratos/",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 2,\r\n    \"nome\": \"1003\"\r\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "findAll",
+					"request": {
+						"url": "http://localhost:8080/curso-preparatorio/contratos",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "findById",
+					"request": {
+						"url": "http://localhost:8080/curso/resources/contratos/2",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "save",
+					"request": {
+						"url": "http://localhost:8080/curso-preparatorio/contratos",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"taxaMatricula\": 100,\n        \"valorCurso\": 1000,\n        \"descontoCurso\": 0.1,\n        \"qtdParcelasCurso\": 1,\n        \"qtdParcelasMaterial\": 1,\n        \"valorMaterial\": 500,\n        \"formaPagamento\": \"DINHEIRO\",\n        \"diaVencimento\": 1,\n        \"matricula\": \"20201071001\",\n        \"dataMatricula\": 1577847600000,\n        \"situacao\": \"ATIVA\",\n         \n        \"aluno\":   {\n        \"id\": 4,\n        \"nome\": \"ROSSYWAN\",\n        \"cpf\": \"107.669.177-30\",\n        \"rg\": \"20.524.877-1\",\n        \"ufRg\": \"RJ\",\n        \"orgaoExpedidor\": \"DETRAN\",\n        \"sexo\": \"MASCULINO\",\n        \"dataNascimento\": 494564400000,\n        \"celular\": \"2198488-0409\",\n        \"residencial\": \"213276-8531\",\n        \"email\": \"FFRANCACOSTA@GMAIL.COM\",\n        \"cep\": \"21381-050\",\n        \"endereco\": \"QUINTÃO 153\",\n        \"bairro\": \"CASCADURA\",\n        \"cidade\": \"RIO DE JANEIRO\",\n        \"estado\": \"RJ\",\n        \"pai\": \"DARCY\",\n        \"mae\": \"FATIMA\",\n        \"situacao\": \"INATIVO\"\n    },\n        \n        \"turma\":  {\n        \"id\": 1,\n        \"nome\": \"1001A\",\n        \"status\": \"ATIVA\",\n        \"unidade\": {\n            \"id\": 1,\n            \"nome\": \"ABOLIÇÃO\",\n            \"endereco\": \"RUA DA ABOLIÇÃO 100\",\n            \"status\": \"ATIVA\"\n        }\n    }\n    }"
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
