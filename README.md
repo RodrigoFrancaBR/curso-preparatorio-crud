@@ -1,5 +1,11 @@
-#Projeto de estudo para o curso preparatório
+#Curso de Java
+Trabalhando com multi-mÃ³dulos
 
-Módulo de Domínio
-
-contendo classes de domínio
+Tecnologias envolvidas: 
+Java 8,
+Maven,
+JPA,
+ECLIPSE-LINK,
+MYSQL,
+JAX-RS COM jersey
+Modelo de dados curso-preparatorio
