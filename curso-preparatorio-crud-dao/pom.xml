@@ -10,13 +10,14 @@
 		<relativePath>../curso-preparatorio-crud-build/pom.xml</relativePath>
 	</parent>
 
-	<artifactId>curso-preparatorio-crud-domain</artifactId>
+
+	<artifactId>curso-preparatorio-crud-dao</artifactId>
 	<packaging>jar</packaging>
 
-	<name>Módulo - DOMAIN</name>
+	<name>Módulo - DAO</name>
 	<url>https://github.com/RodrigoFrancaBR</url>
-	<description>classes de domínio</description>
-	
+	<description>classes de banco de dados</description>
+
 	<build>
 		<plugins>
 			<plugin>
@@ -35,39 +36,14 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 
-	<repositories>
-		<repository>
-			<id>eclipselink</id>
-			<url>http://www.eclipse.org/downloads/download.php?r=1&amp;nf=1&amp;file=/rt/eclipselink/maven.repo/
-			</url>
-		</repository>
-	</repositories>
-
 	<dependencies>
 
-		<!-- https://mvnrepository.com/artifact/org.eclipse.persistence/javax.persistence -->
 		<dependency>
-			<groupId>org.eclipse.persistence</groupId>
-			<artifactId>javax.persistence</artifactId>
+			<groupId>br.com.franca</groupId>
+			<artifactId>curso-preparatorio-crud-domain</artifactId>
 			<scope>compile</scope>
-			<version>2.1.0</version>
-		</dependency>
-
-		<!-- https://mvnrepository.com/artifact/org.eclipse.persistence/eclipselink -->
-		<dependency>
-			<groupId>org.eclipse.persistence</groupId>
-			<artifactId>eclipselink</artifactId>
-			<scope>compile</scope>
-			<version>2.6.4</version>
-		</dependency>
-
-		<dependency>
-			<groupId>org.junit.jupiter</groupId>
-			<artifactId>junit-jupiter-engine</artifactId>
-			<version>5.5.2</version>
-			<scope>test</scope>
+			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 
 	</dependencies>
-
 </project>
