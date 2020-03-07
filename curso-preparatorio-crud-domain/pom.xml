@@ -16,7 +16,7 @@
 	<name>Módulo - DOMAIN</name>
 	<url>https://github.com/RodrigoFrancaBR</url>
 	<description>classes de domínio</description>
-	
+
 	<build>
 		<plugins>
 			<plugin>
@@ -45,13 +45,16 @@
 
 	<dependencies>
 
+		<!-- https://wiki.eclipse.org/EclipseLink/Maven#Configuring_your_pom.xml -->
+		<!-- https://wiki.eclipse.org/EclipseLink/Examples/JPA/JSF_Tutorial#Create_an_Entity -->
+		
 		<!-- https://mvnrepository.com/artifact/org.eclipse.persistence/javax.persistence -->
-		<dependency>
-			<groupId>org.eclipse.persistence</groupId>
-			<artifactId>javax.persistence</artifactId>
-			<scope>compile</scope>
-			<version>2.1.0</version>
-		</dependency>
+	<!--		<dependency>
+				<groupId>org.eclipse.persistence</groupId>
+				<artifactId>javax.persistence</artifactId>
+				<scope>compile</scope>
+				<version>2.1.0</version>
+			</dependency> -->
 
 		<!-- https://mvnrepository.com/artifact/org.eclipse.persistence/eclipselink -->
 		<dependency>

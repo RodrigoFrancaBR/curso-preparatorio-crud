@@ -37,12 +37,20 @@
 	</properties>
 
 	<dependencies>
-
+		
+		<!--Módulo de Domínio-->
 		<dependency>
 			<groupId>br.com.franca</groupId>
 			<artifactId>curso-preparatorio-crud-domain</artifactId>
 			<scope>compile</scope>
 			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>5.1.40</version>
 		</dependency>
 
 	</dependencies>

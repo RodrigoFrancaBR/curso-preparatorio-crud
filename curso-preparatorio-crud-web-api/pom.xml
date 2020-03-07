@@ -37,6 +37,7 @@
 				</configuration>
 			</plugin>
 		</plugins>
+		<finalName>curso-preparatorio</finalName>
 	</build>
 
 	<properties>
