@@ -4,17 +4,13 @@ import java.util.List;
 
 import br.com.franca.business.exceptions.CursoServiceException;
 import br.com.franca.dao.exceptions.CursoDAOException;
-import br.com.franca.dao.implement.ParcelaDAO;
+import br.com.franca.dao.implement.DAOGeneric;
 import br.com.franca.domain.Parcela;
 import br.com.franca.domain.enun.SituacaoParcela;
 
 public class ParcelaBusiness extends BusinessGeneric<Parcela, Long> {
 
-	private ParcelaDAO dao;
-
-	public ParcelaBusiness() {
-		this.dao = new ParcelaDAO();
-	}
+	private DAOGeneric<Parcela> dao;
 
 	public List<Parcela> findAll() throws CursoServiceException {
 		try {

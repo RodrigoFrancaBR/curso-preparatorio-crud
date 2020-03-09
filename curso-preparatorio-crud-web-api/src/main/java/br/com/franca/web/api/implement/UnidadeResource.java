@@ -4,6 +4,7 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.List;
 
+import javax.inject.Inject;
 import javax.ws.rs.Path;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
@@ -16,12 +17,8 @@ import br.com.franca.web.api.interfaces.UnidadeAPI;
 
 @Path("unidades")
 public class UnidadeResource extends ResourceGeneric<Unidade> implements UnidadeAPI {
-
+	@Inject
 	private UnidadeBusiness business;
-
-	public UnidadeResource() {
-		this.business = new UnidadeBusiness();
-	}
 
 	@Override
 	public Response findAll() {

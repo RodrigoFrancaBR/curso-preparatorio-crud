@@ -4,17 +4,14 @@ import java.util.List;
 
 import br.com.franca.business.exceptions.CursoServiceException;
 import br.com.franca.dao.exceptions.CursoDAOException;
+import br.com.franca.dao.implement.DAOGeneric;
 import br.com.franca.dao.implement.UnidadeDAO;
 import br.com.franca.domain.Unidade;
 import br.com.franca.domain.enun.Status;
 
 public class UnidadeBusiness extends BusinessGeneric<Unidade, Long> {
 
-	private UnidadeDAO dao;
-
-	public UnidadeBusiness() {
-		this.dao = new UnidadeDAO();
-	}
+	private DAOGeneric<Unidade> dao = new UnidadeDAO();
 
 	public List<Unidade> findAll() throws CursoServiceException {
 		try {

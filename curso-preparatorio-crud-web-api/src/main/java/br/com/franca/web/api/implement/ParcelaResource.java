@@ -4,6 +4,7 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.List;
 
+import javax.inject.Inject;
 import javax.ws.rs.Path;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
@@ -16,12 +17,8 @@ import br.com.franca.web.api.interfaces.ParcelaAPI;
 
 @Path("parcelas")
 public class ParcelaResource extends ResourceGeneric<Parcela> implements ParcelaAPI {
-
+	@Inject
 	private ParcelaBusiness business;
-
-	public ParcelaResource() {
-		this.business = new ParcelaBusiness();
-	}
 
 	@Override
 	public Response findAll() {
