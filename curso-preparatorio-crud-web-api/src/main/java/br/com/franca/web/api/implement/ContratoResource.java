@@ -4,7 +4,6 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.List;
 
-import javax.inject.Inject;
 import javax.ws.rs.Path;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
@@ -17,9 +16,10 @@ import br.com.franca.domain.Parcela;
 import br.com.franca.web.api.interfaces.ContratoAPI;
 
 @Path("contratos")
+
 public class ContratoResource extends ResourceGeneric<Contrato> implements ContratoAPI {
-	@Inject
-	private ContratoBusiness business;
+
+	private ContratoBusiness business = new ContratoBusiness();
 
 	@Override
 	public Response findAll() {

@@ -4,7 +4,6 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.List;
 
-import javax.inject.Inject;
 import javax.ws.rs.Path;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
@@ -16,9 +15,10 @@ import br.com.franca.domain.Aluno;
 import br.com.franca.web.api.interfaces.AlunoAPI;
 
 @Path("alunos")
+
 public class AlunoResource extends ResourceGeneric<Aluno> implements AlunoAPI {
-	@Inject
-	private AlunoBusiness business;
+
+	private AlunoBusiness business = new AlunoBusiness();
 
 	@Override
 	public Response findAll() {

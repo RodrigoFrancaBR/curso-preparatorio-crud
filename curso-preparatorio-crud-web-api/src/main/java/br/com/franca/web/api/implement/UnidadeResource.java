@@ -10,18 +10,27 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.Response.Status;
 
+import br.com.franca.Rodrigo;
 import br.com.franca.business.UnidadeBusiness;
 import br.com.franca.business.exceptions.CursoServiceException;
 import br.com.franca.domain.Unidade;
 import br.com.franca.web.api.interfaces.UnidadeAPI;
 
 @Path("unidades")
-public class UnidadeResource extends ResourceGeneric<Unidade> implements UnidadeAPI {
-	@Inject
+public class UnidadeResource extends ResourceGeneric<Unidade> implements UnidadeAPI {	
+	@Inject 
+	private Rodrigo rodrigo;
+	@Inject 
 	private UnidadeBusiness business;
+	
+	/*
+	 * @Inject public UnidadeResource(Rodrigo r) { this.rodrigo = r; }
+	 */
 
 	@Override
 	public Response findAll() {
+		rodrigo.setNome("França");
+		System.out.println(rodrigo.getNome());
 		List<Unidade> resposta = null;
 		try {
 

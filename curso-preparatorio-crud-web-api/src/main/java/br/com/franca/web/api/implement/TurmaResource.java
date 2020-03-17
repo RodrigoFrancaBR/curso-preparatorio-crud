@@ -4,7 +4,6 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.List;
 
-import javax.inject.Inject;
 import javax.ws.rs.Path;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
@@ -17,8 +16,8 @@ import br.com.franca.web.api.interfaces.TurmaAPI;
 
 @Path("turmas")
 public class TurmaResource extends ResourceGeneric<Turma> implements TurmaAPI {
-	@Inject
-	private TurmaBusiness business;
+
+	private TurmaBusiness business = new TurmaBusiness();
 
 	@Override
 	public Response findAll() {

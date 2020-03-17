@@ -94,6 +94,24 @@
 			<artifactId>weld-servlet</artifactId>
 			<version>2.3.5.Final</version>
 		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>3.1.0</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.glassfish.jersey.ext.cdi/jersey-cdi1x -->
+		<dependency>
+			<groupId>org.glassfish.jersey.ext.cdi</groupId>
+			<artifactId>jersey-cdi1x</artifactId>
+			<version>2.23</version>
+		</dependency>
+
+
+
 	</dependencies>
 
 </project>
